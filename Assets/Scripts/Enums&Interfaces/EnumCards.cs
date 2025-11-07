@@ -1,5 +1,6 @@
 using UnityEngine;
 
+
 public class EnumCards
 {
     public enum CardType
@@ -8,6 +9,10 @@ public class EnumCards
         Spades,
         Hearts,
         Diamonds,
-        Clubs
+        Clubs,
+        Faces,
+        Numbers,
+        Red,
+        Black
     }
 }
