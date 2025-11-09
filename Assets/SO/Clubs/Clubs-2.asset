@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 826d728869c9f054dadba0bc54c87f82, type: 3}
   m_Name: Clubs-2
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 8640189368264541578, guid: f9efce6ac8b3803469b39afa40268495, type: 3}
   cardType: 040000000600000008000000
   cardName: 2-Clubs
   ingredientSprite: {fileID: 0}
