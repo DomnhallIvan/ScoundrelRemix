@@ -7,7 +7,7 @@ public class HandManager : MonoBehaviour
 {
     public GameObject cardPrefab;
 
-    public Transform handTransform;
+    public List<Transform> handTransform=new List<Transform>();
 
     public float fanSpread = 5f;
 
@@ -16,17 +16,20 @@ public class HandManager : MonoBehaviour
     private void Start()
     {
         AddCardToHand();
-        AddCardToHand();
-        AddCardToHand();
-        AddCardToHand();
     }
 
     public void AddCardToHand()
     {
-        GameObject card = Instantiate(cardPrefab,handTransform.position,Quaternion.identity,handTransform);
-        cardsInHand.Add(card);
+        int handTransforms=handTransform.Count;
+        for(int i=0;i< handTransforms;i++)
+        {
+            GameObject card = Instantiate(cardPrefab, handTransform[i].transform.position, Quaternion.identity, handTransform[i]);
+            cardsInHand.Add(card);
+        }
+        //GameObject card = Instantiate(cardPrefab,handTransform.position,Quaternion.identity,handTransform);
+        //cardsInHand.Add(card);
 
-        UpdateHandVisuals();
+        // UpdateHandVisuals();
     }
 
     private void UpdateHandVisuals()
