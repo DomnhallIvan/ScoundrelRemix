@@ -14,7 +14,7 @@ public class BaseSpace : MonoBehaviour, IParentsCards
         Debug.LogError("Se te olvido poner algo en tu Interact lol");
     }
 
-    public void ClearCard()
+    public void ClearCardObject()
     {
         currentCard = null;
         OnCardChanged?.Invoke(this, EventArgs.Empty);
@@ -30,9 +30,14 @@ public class BaseSpace : MonoBehaviour, IParentsCards
         return currentCard != null;
     }
 
-    public void SetCard(BaseCard card)
+    public void SetCardObject(BaseCard card)
     {
         currentCard = card;
         OnCardChanged?.Invoke(this, EventArgs.Empty);
+    }
+
+    public Transform GetCardObjectFollowTransform()
+    {
+        return CardTop;
     }
 }

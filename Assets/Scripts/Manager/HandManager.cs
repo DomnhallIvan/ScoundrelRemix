@@ -5,9 +5,9 @@ using System.Collections.Generic;
 
 public class HandManager : MonoBehaviour
 {
-    public GameObject cardPrefab;
+   // public GameObject cardPrefab;
 
-    public List<Transform> handTransform=new List<Transform>();
+    public List<BaseSpace> handSpaces=new List<BaseSpace>();
 
     public float fanSpread = 5f;
 
@@ -15,17 +15,19 @@ public class HandManager : MonoBehaviour
 
     private void Start()
     {
-        AddCardToHand();
+        //AddCardToHand();
     }
 
-    public void AddCardToHand()
+    public void AddCardTo1Hand( CardSO cardSO, BaseSpace spaceHand)
     {
-        int handTransforms=handTransform.Count;
-        for(int i=0;i< handTransforms;i++)
-        {
-            GameObject card = Instantiate(cardPrefab, handTransform[i].transform.position, Quaternion.identity, handTransform[i]);
-            cardsInHand.Add(card);
-        }
+
+   
+                BaseCard.SpawnCardObject(cardSO, spaceHand);
+           
+            
+           // GameObject card = Instantiate(cardSO.prefab, handTransform[i].transform.position, Quaternion.identity, handTransform[i]);
+           // cardsInHand.Add(card);
+        
         //GameObject card = Instantiate(cardPrefab,handTransform.position,Quaternion.identity,handTransform);
         //cardsInHand.Add(card);
 
