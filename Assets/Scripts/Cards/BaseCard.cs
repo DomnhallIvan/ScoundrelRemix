@@ -17,9 +17,8 @@ public class BaseCard : MonoBehaviour
     {
         print("Falta una interacción");
 
-        DiscardPileManager discardPManager=FindFirstObjectByType<DiscardPileManager>();
-        discardPManager.listofDCards.Add(CardType);
-        DestroySelf();
+        DiscardCard();
+       
 
     }
 
@@ -114,5 +113,12 @@ public class BaseCard : MonoBehaviour
         cardParent.ClearCardObject();
         Destroy(gameObject);
 
+    }
+
+    public void DiscardCard()
+    {
+        DiscardPileManager discardPManager = FindFirstObjectByType<DiscardPileManager>();
+        discardPManager.listofDCards.Add(CardType);
+        DestroySelf();
     }
 }

@@ -8,6 +8,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2728041538454001693, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 616551856376859001}
+    - target: {fileID: 2728041538454001693, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Interact
+      objectReference: {fileID: 0}
+    - target: {fileID: 2728041538454001693, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: C_Diamonds, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 5077845314310155494, guid: 043ea9837c42504498623d705f63fa26, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -56,8 +68,80 @@ PrefabInstance:
       propertyPath: m_Name
       value: Diamonds-10
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7308574392260262201, guid: 043ea9837c42504498623d705f63fa26, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8032925745271976006, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 616551856376859001}
   m_SourcePrefab: {fileID: 100100000, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+--- !u!114 &3074416495869460167 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1962085752216164267, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+  m_PrefabInstance: {fileID: 3571423889707067756}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4903602357557801219 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8474973255958354031, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+  m_PrefabInstance: {fileID: 3571423889707067756}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5649819086441223983 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9221137405851500099, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+  m_PrefabInstance: {fileID: 3571423889707067756}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &6839437849357703466 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8032925745271976006, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+  m_PrefabInstance: {fileID: 3571423889707067756}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &616551856376859001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6839437849357703466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b212d81f7594fa94a992f9a5a08ab169, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CardType: {fileID: 11400000, guid: 9ff4e81d82888be44a12d518c1279fae, type: 2}
+  Icons:
+  - {fileID: 5649819086441223983}
+  - {fileID: 4903602357557801219}
+  CardName:
+  - {fileID: 3074416495869460167}
+  - {fileID: 8882574941292654450}
+--- !u!114 &8882574941292654450 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5392218069682456094, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+  m_PrefabInstance: {fileID: 3571423889707067756}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
