@@ -13,8 +13,13 @@ public class BaseCard : MonoBehaviour
 
     private IParentsCards cardParent;
 
-    public void Interact()
+    public virtual void Interact()
     {
+        print("Falta una interacción");
+
+        DiscardPileManager discardPManager=FindFirstObjectByType<DiscardPileManager>();
+        discardPManager.listofDCards.Add(CardType);
+        DestroySelf();
 
     }
 

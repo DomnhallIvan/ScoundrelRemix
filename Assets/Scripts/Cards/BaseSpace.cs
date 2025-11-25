@@ -12,6 +12,8 @@ public class BaseSpace : MonoBehaviour, IParentsCards
     public virtual void Interact()
     {
         Debug.LogError("Se te olvido poner algo en tu Interact lol");
+
+
     }
 
     public void ClearCardObject()
