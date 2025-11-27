@@ -3,7 +3,8 @@ using UnityEngine;
 public enum AttackType
 {
     Common,
-    Special
+    Special,
+    Healing
 }
 public struct AttackInfo
 {

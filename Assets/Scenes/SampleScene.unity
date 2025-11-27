@@ -164,6 +164,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 20
+  _maxHealth: 20
+  _weaponsManagerRef: {fileID: 871630375}
 --- !u!1 &125597199
 GameObject:
   m_ObjectHideFlags: 0
@@ -1034,6 +1036,16 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f7d0bcb7cfcafd64b948a960e84ac9d1, type: 2}
   - {fileID: 11400000, guid: e5d4a2995a02f124bb3a179b87d0620e, type: 2}
   - {fileID: 11400000, guid: f8fd59c42e341274e92538dcd7640f5b, type: 2}
+  - {fileID: 11400000, guid: 9211b652f26f81741a14a3891020a1b4, type: 2}
+  - {fileID: 11400000, guid: 34cd905ae4ab7fb478958d51d719f3ea, type: 2}
+  - {fileID: 11400000, guid: 529df67d75345b1478dc7a20d035d4c1, type: 2}
+  - {fileID: 11400000, guid: 3143f7e706167c24285e0967e86ca835, type: 2}
+  - {fileID: 11400000, guid: 8b16fa8f08eabb344ae189fa91d1cf25, type: 2}
+  - {fileID: 11400000, guid: 1c4d4c8a7ad72c042bd4e95d294e1b74, type: 2}
+  - {fileID: 11400000, guid: 87048fc180e407a4483171b8ef8c8507, type: 2}
+  - {fileID: 11400000, guid: 8a689f77cde7877429ed7971997b6e63, type: 2}
+  - {fileID: 11400000, guid: 1d657d772fff89b4aa38e4b0c3bd3251, type: 2}
+  - {fileID: 11400000, guid: 13e747a3d378aaf46804f42c4fba772e, type: 2}
   shuffledList: []
   handManagerRef: {fileID: 1066726387}
 --- !u!1 &639754550
@@ -1067,7 +1079,6 @@ RectTransform:
   m_Children:
   - {fileID: 644916756}
   - {fileID: 1937492022}
-  - {fileID: 793276634}
   m_Father: {fileID: 1759118067}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1616,41 +1627,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 764767073}
   m_CullTransparentMesh: 1
---- !u!1 &793276633
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 793276634}
-  m_Layer: 5
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &793276634
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 793276633}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 639754551}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 873.991, y: -50}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &800235433
 GameObject:
   m_ObjectHideFlags: 0
@@ -1963,6 +1939,8 @@ MonoBehaviour:
   currentCard: {fileID: 0}
   currentweaponCardSO: {fileID: 0}
   currentWeaponCard: {fileID: 0}
+  playerHealthRef: {fileID: 0}
+  activateWeapon: 0
 --- !u!1 &928699543
 GameObject:
   m_ObjectHideFlags: 0
@@ -3241,7 +3219,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1937492024}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 871630373}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1937492024
 MonoBehaviour:
   m_ObjectHideFlags: 0

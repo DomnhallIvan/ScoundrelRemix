@@ -2,15 +2,22 @@ using UnityEngine;
 
 public class C_Hearts : BaseCard
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private PlayerHealthManager phealthManager;
+
+    private void Start()
     {
-        
+        CardType = this.GetComponent<BaseCard>().CardType;
+        Icons = this.GetComponent<BaseCard>().Icons;
+        CardName = this.GetComponent<BaseCard>().CardName;
+
+        phealthManager = FindFirstObjectByType<PlayerHealthManager>();
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void Interact()
     {
-        
+        phealthManager.HealDamage(new AttackInfo { attackType = AttackType.Healing, amount = CardType.damage });
+        DiscardCard();
+        print("I Healed");
     }
 }
