@@ -8,8 +8,8 @@ public class BaseCard : MonoBehaviour
 {
     public CardSO CardType;
 
-    [SerializeField] private List<Image> Icons = new List<Image>();
-    [SerializeField] private List<TextMeshProUGUI> CardName = new List<TextMeshProUGUI>();
+    public List<Image> Icons = new List<Image>();
+    public List<TextMeshProUGUI> CardName = new List<TextMeshProUGUI>();
 
     private IParentsCards cardParent;
 

@@ -8,6 +8,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2728041538454001693, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5570873987742503316}
+    - target: {fileID: 2728041538454001693, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: C_ClubsSpades, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 5077845314310155494, guid: 043ea9837c42504498623d705f63fa26, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -59,5 +67,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8032925745271976006, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5570873987742503316}
   m_SourcePrefab: {fileID: 100100000, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+--- !u!1 &6839437849357703466 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8032925745271976006, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+  m_PrefabInstance: {fileID: 3571423889707067756}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5570873987742503316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6839437849357703466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c5e2d448aa93c9419af2f8e505eb5bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CardType: {fileID: 0}
+  Icons: []
+  CardName: []
+  type: 0
+  phealthManager: {fileID: 0}
