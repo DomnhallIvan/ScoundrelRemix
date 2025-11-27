@@ -20,27 +20,41 @@ public class PlayerWeaponsManager : BaseSpace
         }*/
     }
 
-    private void UseWeapon()
+    public void UseWeapon()
     {
-        throw new NotImplementedException();
+        //Here the player can Use the Weapon. Once the weapon it's Selected then It will interact with another enemy, or card. Interacting with another enemies changes them, while using another card doesnt
+        print("Use esta arma");
     }
 
     public void AddWeapon(CardSO newWeapon)
     {
         if(currentweaponCardSO != null)
         {
-            DiscardPileManager discardPManager = FindFirstObjectByType<DiscardPileManager>();
-            discardPManager.listofDCards.Add(currentweaponCardSO);
-            Destroy(currentWeaponCard);
-            currentweaponCardSO = newWeapon;
-            currentWeaponCard = newWeapon.prefab.GetComponent<BaseCard>();
+            DiscardCurrentWeapon();
+            SpawnCard(newWeapon);
+
         }
         else
-        {           
-            BaseCard.SpawnCardObject(newWeapon, this);
-            currentweaponCardSO = newWeapon;
-            currentWeaponCard = newWeapon.prefab.GetComponent<BaseCard>();
+        {
+            SpawnCard(newWeapon);
         }
     }
+
+    private void SpawnCard(CardSO newCard)
+    {
+        BaseCard.SpawnCardObject(newCard, this);
+        currentWeaponCard=GetCard();
+        C_Diamonds current_Diamond = currentWeaponCard.GetComponent<C_Diamonds>();
+        current_Diamond.HasAPlayer = true;
+        currentweaponCardSO = newCard;             
+    }
+
+    private void DiscardCurrentWeapon()
+    {
+        DiscardPileManager discardPManager = FindFirstObjectByType<DiscardPileManager>();
+        discardPManager.listofDCards.Add(currentweaponCardSO);
+        Destroy(currentWeaponCard);
+    }
+
     
 }

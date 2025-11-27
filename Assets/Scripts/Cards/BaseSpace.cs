@@ -6,8 +6,10 @@ public class BaseSpace : MonoBehaviour, IParentsCards
     [SerializeField] private Transform CardTop;
 
     [SerializeField] private BaseCard currentCard;
+    //[SerializeField] private PlayerWeaponsManager weaponsManager;
 
     public event EventHandler OnCardChanged;
+
 
     public virtual void Interact()
     {
@@ -42,4 +44,9 @@ public class BaseSpace : MonoBehaviour, IParentsCards
     {
         return CardTop;
     }
+
+    /*public PlayerWeaponsManager GetPlayerWeaponsManager()
+    {
+        return weaponsManager;
+    }*/
 }

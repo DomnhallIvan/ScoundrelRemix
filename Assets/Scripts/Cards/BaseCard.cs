@@ -36,6 +36,7 @@ public class BaseCard : MonoBehaviour
 
         this.cardParent = cardsParents;
 
+
         if (cardsParents.HasCard())
         {
             Debug.LogError("ICardParent already has a CardParent!");
@@ -50,10 +51,17 @@ public class BaseCard : MonoBehaviour
         
     }
 
+    public void SetCardPlayerWeapon(PlayerWeaponsManager manager)
+    {
+        //this.cardParent.GetPlayerWeaponsManager()=manager;
+    }
+
     public IParentsCards GetCardParent()
     {
         return cardParent;
     }
+
+
 
     public void DestroySelf()
     {
