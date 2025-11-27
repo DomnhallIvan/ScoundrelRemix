@@ -27,6 +27,9 @@ public class C_ClubsSpades : BaseCard
     public override void Interact()
     {
         MakeAttack(new AttackInfo { attackType = AttackType.Common, amount = CardType.damage });
+        phealthManager.TakeDamage(new AttackInfo { attackType = AttackType.Common, amount = CardType.damage });
+        DiscardCard();
+        print("I Attacked");
     }
 
     public void Debuggin(string debugtext)
