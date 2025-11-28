@@ -26,9 +26,26 @@ public class C_ClubsSpades : BaseCard
 
     public override void Interact()
     {
+        
         MakeAttack(new AttackInfo { attackType = AttackType.Common, amount = CardType.damage });
-        phealthManager.TakeDamage(new AttackInfo { attackType = AttackType.Common, amount = CardType.damage });
-        DiscardCard();
+        phealthManager.CalculateDamage(new AttackInfo { attackType = AttackType.Common, amount = CardType.damage });
+
+        if (!phealthManager.HasAnActiveWeapon())
+        {
+            DiscardCard();
+        }
+        else
+        {
+            if (phealthManager.GetEnoughDamage(CardType.damage))
+            {
+                DiscardCard();
+            }
+            else
+            {
+                print("Elige otra opción toneto");
+            }
+        }
+          
         print("I Attacked");
     }
 

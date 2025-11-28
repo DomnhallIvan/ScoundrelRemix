@@ -10,19 +10,6 @@ public class PlayerWeaponsManager : BaseSpace
     [SerializeField] private PlayerHealthManager playerHealthRef;
     public bool activateWeapon;
 
-    public void Interact(CardSO weaponCardSO)
-    {
-        /*
-        if (currentweaponCardSO != null)
-        {
-            UseWeapon(weaponCardSO);
-        }
-        else
-        {
-            AddWeapon(weaponCardSO);
-        }*/
-    }
-
     public void UseWeapon()
     {
 
@@ -35,10 +22,7 @@ public class PlayerWeaponsManager : BaseSpace
             activateWeapon = true;
         else
             activateWeapon = false;
-    }
-
-    
-
+    } 
 
 
     public void AddWeapon(CardSO newWeapon)
@@ -55,12 +39,23 @@ public class PlayerWeaponsManager : BaseSpace
         }
     }
 
+
+    public float GetCardDamage()
+    {
+        return GetCard().GetCardSO().damage;
+    }
+
+    public C_Diamonds GetDiamondCard()
+    {
+        return GetCard().GetComponent<C_Diamonds>();
+    }
+
     private void SpawnCard(CardSO newCard)
     {
         BaseCard.SpawnCardObject(newCard, this);
         currentWeaponCard=GetCard();
         C_Diamonds current_Diamond = currentWeaponCard.GetComponent<C_Diamonds>();
-        current_Diamond.HasAPlayer = true;
+        current_Diamond.hasAPlayer = true;
         currentweaponCardSO = newCard;             
     }
 

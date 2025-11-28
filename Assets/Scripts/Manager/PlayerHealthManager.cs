@@ -11,37 +11,48 @@ public class PlayerHealthManager : MonoBehaviour
         _health = _maxHealth;
     }
 
-    public void TakeDamage(AttackInfo attack)
+    public void CalculateDamage(AttackInfo attack)
     {
         //Podría poner que pasen diferentes efectos dependiendo del tipo de daño
         //Ejemplo if(attack.attackType=Magical)
         //Efecto de magia o algo así
 
-        if (!_weaponsManagerRef.activateWeapon)
+        if (!HasAnActiveWeapon())
         {
-            _health -= attack.amount;
-            if (_health <= 0)
-            {
-                YouAreDead();
-            }
+            TakeDamage(attack);
         }
         else
         {
-            _weaponsManagerRef.activateWeapon = false;
-            float weaponDamage= _weaponsManagerRef.GetCard().GetCardSO().damage;
-            float totaldamage = attack.amount - weaponDamage;
-            if (totaldamage >= 0) //Si el daño es mayor o igual a 0 entonces procede con el cálculo del daño.
+            if (GetEnoughDamage(attack.amount))
             {
-                _health -= totaldamage;
-                //Falta especificar a qué tipo de cartas puede defender un arma
-                if (_health <= 0)
+                _weaponsManagerRef.activateWeapon = false;
+                var DiamondCard = _weaponsManagerRef.GetCard().GetComponent<C_Diamonds>();
+                DiamondCard.SetDamageLimit(attack.amount);
+                //Hace el calculo total del daño 
+                float weaponDamage = _weaponsManagerRef.GetCardDamage();
+                float totaldamage = attack.amount - weaponDamage;
+
+                if (totaldamage >= 0) //Si el daño es mayor o igual a 0 entonces procede con el cálculo del daño.
                 {
-                    YouAreDead();
+                    TakeDamage(attack);
                 }
             }
-            
+            else
+            {
+                //You Can't Attack
+                print("You Cant Attack this");
+            }
         }
-       
+    }
+
+    public void TakeDamage(AttackInfo attack)
+    {
+        _health -= attack.amount;
+        if (_health <= 0)
+        {
+            YouAreDead();
+        }
+
     }
 
     public void HealDamage(AttackInfo attack)
@@ -66,5 +77,22 @@ public class PlayerHealthManager : MonoBehaviour
         {
             playerDeath.YouAreDead();
         }
+    }
+
+    public bool GetEnoughDamage(float attackAmount)
+    {
+        float currentweaponLimit = _weaponsManagerRef.GetDiamondCard().GetDamageLimit();
+        if (currentweaponLimit >= attackAmount)
+            return true;
+        else
+            return false;
+    }
+
+    public bool HasAnActiveWeapon()
+    {
+        if (_weaponsManagerRef.activateWeapon) 
+            return true;
+        else
+            return false;
     }
 }
