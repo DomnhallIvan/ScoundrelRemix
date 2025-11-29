@@ -11,6 +11,9 @@ public class BaseCard : MonoBehaviour
     public List<Image> Icons = new List<Image>();
     public List<TextMeshProUGUI> CardName = new List<TextMeshProUGUI>();
 
+    [SerializeField] private GameManager gameManager;
+
+
     private IParentsCards cardParent;
 
     public virtual void Interact()
@@ -18,7 +21,7 @@ public class BaseCard : MonoBehaviour
         print("Falta una interacción");
 
         DiscardCard();
-       
+        gameManager.cardsTakenCounter++;  
 
     }
 
@@ -61,6 +64,11 @@ public class BaseCard : MonoBehaviour
         return cardParent;
     }
 
+    public void ClearCardParent()
+    {
+        cardParent.ClearCardObject();
+    }
+
 
 
     public void DestroySelf()
@@ -68,8 +76,10 @@ public class BaseCard : MonoBehaviour
         if (cardParent != null)
         {
             cardParent.ClearCardObject();
+           // GameManager.Instance.ShouldChangeRound();
         }
         Destroy(gameObject);
+        
     }
 
     /*

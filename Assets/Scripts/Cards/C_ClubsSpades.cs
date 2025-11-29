@@ -21,7 +21,7 @@ public class C_ClubsSpades : BaseCard
     {
         attackInfo.owner = gameObject;
 
-        //AttackSystem.Instance?.MakeAttack(attackInfo);
+        
     }
 
     public override void Interact()
@@ -32,21 +32,33 @@ public class C_ClubsSpades : BaseCard
 
         if (!phealthManager.HasAnActiveWeapon())
         {
+
+            
+            if(this.GetCardParent() != null)
+            {
+                ClearCardParent();
+            }
+            GameManager.Instance.ShouldChangeRound();
             DiscardCard();
+         
         }
         else
         {
             if (phealthManager.GetEnoughDamage(CardType.damage))
             {
+                GameManager.Instance.ShouldChangeRound();
+                ClearCardParent();
                 DiscardCard();
+             
             }
             else
             {
+                //Aquí debería de mostrar como algo que te diga que no puedes hacer eso
                 print("Elige otra opción toneto");
             }
         }
           
-        print("I Attacked");
+        
     }
 
     public void Debuggin(string debugtext)

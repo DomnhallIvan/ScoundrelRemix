@@ -18,11 +18,11 @@ public class HandManager : MonoBehaviour
         //AddCardToHand();
     }
 
-    public void AddCardTo1Hand( CardSO cardSO, BaseSpace spaceHand)
+    public void AddCardTo1Space( CardSO cardSO, BaseSpace spaceHand)
     {
 
-   
-                BaseCard.SpawnCardObject(cardSO, spaceHand);
+        if(!spaceHand.HasCard())
+            BaseCard.SpawnCardObject(cardSO, spaceHand);
            
             
            // GameObject card = Instantiate(cardSO.prefab, handTransform[i].transform.position, Quaternion.identity, handTransform[i]);

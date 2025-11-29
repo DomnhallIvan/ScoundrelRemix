@@ -22,9 +22,13 @@ public class C_Diamonds : BaseCard
         if(!hasAPlayer)
         {
             FindFirstObjectByType<PlayerWeaponsManager>().AddWeapon(GetCardSO());
-
+            if (this.GetCardParent() != null)
+            {
+                ClearCardParent();
+            }
+            GameManager.Instance.ShouldChangeRound();
             DiscardCard();
-            print("No tiene Papy con PlayerWeaponsManager");
+                        
         }
         else
         {

@@ -17,7 +17,14 @@ public class C_Hearts : BaseCard
     public override void Interact()
     {
         phealthManager.HealDamage(new AttackInfo { attackType = AttackType.Healing, amount = CardType.damage });
+        // this.GetCardParent().ClearCardObject();
+        if (this.GetCardParent() != null)
+        {
+            ClearCardParent();
+        }
+        GameManager.Instance.ShouldChangeRound();
         DiscardCard();
-        print("I Healed");
+ 
+        
     }
 }

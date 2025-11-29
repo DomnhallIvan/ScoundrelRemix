@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
 using System.Collections;
+using System;
 
 public class DeckManager : MonoBehaviour
 {
@@ -11,17 +12,34 @@ public class DeckManager : MonoBehaviour
 
     [SerializeField] private HandManager handManagerRef;
 
+    private void Awake()
+    {
+        RoundManager.Instance.OnRoundEnd += StartShuffling;
+    }
 
     private void Start()
     {
-        ShuffleDeck();
+        // ShuffleDeck();
         //NewShuffle();
-       
+        
     }
 
-    private void ShuffleDeck()
+    private void StartShuffling(object sender, EventArgs e)
     {
-        shuffledList = cards.OrderBy(x => Random.value).ToList();
+        if (RoundManager.Instance.GetRoundNumber() == 1)
+        {
+            ShuffleDeck();
+        }
+        else
+        {
+            AddHandCard();
+        }
+    }
+
+    public void ShuffleDeck()
+    {
+        print("Shuffling Decks");
+        shuffledList = cards.OrderBy(x => UnityEngine.Random.value).ToList();
 
         AddHandCard();
     }
@@ -33,7 +51,7 @@ public class DeckManager : MonoBehaviour
         for(int i=0;i<spacesCount&&i<shuffledList.Count;i++)
         {
             var card = shuffledList[0];
-            handManagerRef.AddCardTo1Hand(card, handManagerRef.handSpaces[i]);
+            handManagerRef.AddCardTo1Space(card, handManagerRef.handSpaces[i]);
             shuffledList.RemoveAt(0);
         }
         /*
