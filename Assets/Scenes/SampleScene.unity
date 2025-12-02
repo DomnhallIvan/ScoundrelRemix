@@ -1901,6 +1901,7 @@ GameObject:
   m_Component:
   - component: {fileID: 871630374}
   - component: {fileID: 871630375}
+  - component: {fileID: 871630376}
   m_Layer: 0
   m_Name: PlayerInventoryManager
   m_TagString: Untagged
@@ -1941,6 +1942,20 @@ MonoBehaviour:
   currentWeaponCard: {fileID: 0}
   playerHealthRef: {fileID: 0}
   activateWeapon: 0
+--- !u!114 &871630376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871630373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e5a8ce48a747a14d83d4197eacad27a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _deckMRef: {fileID: 616977995}
+  _handMRef: {fileID: 1066726387}
 --- !u!1 &928699543
 GameObject:
   m_ObjectHideFlags: 0
@@ -3196,7 +3211,7 @@ GameObject:
   - component: {fileID: 1937492024}
   - component: {fileID: 1937492023}
   m_Layer: 5
-  m_Name: Empty-Handed
+  m_Name: Skip Round
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3266,13 +3281,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 871630373}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 871630376}
+        m_TargetAssemblyTypeName: Runaway, Assembly-CSharp
+        m_MethodName: SkipHand
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

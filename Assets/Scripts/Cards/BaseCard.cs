@@ -75,35 +75,19 @@ public class BaseCard : MonoBehaviour
             cardParent.ClearCardObject();
            // GameManager.Instance.ShouldChangeRound();
         }
-      //  GameManager.Instance.cardsTakenCounter++;
         Destroy(gameObject);
-        //GameManager.Instance.cardsTakenCounter++;
         GameManager.Instance.ShouldChangeRound();
         
     }
 
     public void DiscardCard()
     {
+        HandManager handManager = FindFirstObjectByType<HandManager>();
+        handManager.cardsInHand.Remove(CardType);
         DiscardPileManager discardPManager = FindFirstObjectByType<DiscardPileManager>();
         discardPManager.listofDCards.Add(CardType);
         DestroySelf();
     }
-
-
-    /*
-    public bool TryGetWeaponSpace(out PlayerWeaponsManager weaponSpace)
-    {
-        if(this is  PlayerWeaponsManager)
-        {
-            weaponSpace = this as PlayerWeaponsManager;
-            return true;
-        }
-        else
-        {
-            weaponSpace = null;
-            return false;
-        }
-    }*/
 
     public static BaseCard SpawnCardObject(CardSO cardSO, IParentsCards ICardParent)
     {

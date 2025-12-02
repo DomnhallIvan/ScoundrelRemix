@@ -38,8 +38,7 @@ public class PlayerWeaponsManager : BaseSpace
             SpawnCard(newWeapon);
         }
     }
-
-
+        
     public float GetCardDamage()
     {
         return GetCard().GetCardSO().damage;

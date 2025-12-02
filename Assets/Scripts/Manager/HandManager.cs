@@ -1,6 +1,5 @@
 using NUnit.Framework;
 using UnityEngine;
-using System;
 using System.Collections.Generic;
 
 public class HandManager : MonoBehaviour
@@ -11,7 +10,7 @@ public class HandManager : MonoBehaviour
 
     public float fanSpread = 5f;
 
-    public List<GameObject> cardsInHand=new List<GameObject>();
+    public List<CardSO> cardsInHand=new List<CardSO>();
 
     private void Start()
     {
@@ -20,11 +19,10 @@ public class HandManager : MonoBehaviour
 
     public void AddCardTo1Space( CardSO cardSO, BaseSpace spaceHand)
     {
-
-       
         
-            BaseCard.SpawnCardObject(cardSO, spaceHand);
-            print($"New Card here");
+        BaseCard.SpawnCardObject(cardSO, spaceHand);
+        cardsInHand.Add(spaceHand.GetCard().GetCardSO());   
+        print($"New Card here");
 
            
             
@@ -44,7 +42,7 @@ public class HandManager : MonoBehaviour
         for(int i=0;i<cardCount;i++)
         {
             float rotationAngle = (fanSpread * (i - (cardCount - 1) / 2));
-            cardsInHand[i].transform.localRotation=Quaternion.Euler(0f,0f,rotationAngle);
+           // cardsInHand[i].transform.localRotation=Quaternion.Euler(0f,0f,rotationAngle);
         }
     }
 }

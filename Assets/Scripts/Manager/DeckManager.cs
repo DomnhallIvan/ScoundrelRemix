@@ -8,7 +8,7 @@ using System;
 public class DeckManager : MonoBehaviour
 {
     [SerializeField] private List<CardSO> cards = new List<CardSO>();
-    [SerializeField] private List<CardSO> shuffledList = new List<CardSO>();
+    public List<CardSO> shuffledList = new List<CardSO>();
 
     [SerializeField] private HandManager handManagerRef;
 
