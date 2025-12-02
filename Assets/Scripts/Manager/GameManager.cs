@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -20,8 +21,10 @@ public class GameManager : MonoBehaviour
         Instance = this;
     }
 
-    private void Start()
+    private IEnumerator Start()
     {
+        //Esto es solo para retrasar por un frame GameManager y permitir que el resto de Scripts se suscriban apropiadamente antes de iniciar el juego
+        yield return null;
         StartGame();
         print("Start GameManager");
 

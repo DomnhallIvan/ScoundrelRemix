@@ -9,11 +9,9 @@ public class C_ClubsSpades : BaseCard
 
     private void Start()
     {
-       CardType=this.GetComponent<BaseCard>().CardType;
-       Icons=this.GetComponent<BaseCard>().Icons;
-       CardName=this.GetComponent<BaseCard>().CardName;
 
-       phealthManager=FindFirstObjectByType<PlayerHealthManager>();
+
+        phealthManager = FindFirstObjectByType<PlayerHealthManager>();
 
     }
 
@@ -26,30 +24,28 @@ public class C_ClubsSpades : BaseCard
 
     public override void Interact()
     {
-        
         MakeAttack(new AttackInfo { attackType = AttackType.Common, amount = CardType.damage });
         phealthManager.CalculateDamage(new AttackInfo { attackType = AttackType.Common, amount = CardType.damage });
 
         if (!phealthManager.HasAnActiveWeapon())
         {
-
-            
-            if(this.GetCardParent() != null)
-            {
-                ClearCardParent();
-            }
-            GameManager.Instance.ShouldChangeRound();
+            //transform.SetParent(null);
             DiscardCard();
-         
+            //Podría hacer esto un delegate mejor y así evitar referencias
+           // GameManager.Instance.ShouldChangeRound();
+
+
         }
         else
         {
             if (phealthManager.GetEnoughDamage(CardType.damage))
             {
-                GameManager.Instance.ShouldChangeRound();
-                ClearCardParent();
+
+              //  transform.SetParent(null);
                 DiscardCard();
-             
+                //Podría hacer esto un delegate mejor y así evitar referencias
+               // GameManager.Instance.ShouldChangeRound();
+
             }
             else
             {

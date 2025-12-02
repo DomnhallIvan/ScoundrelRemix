@@ -46,32 +46,19 @@ public class DeckManager : MonoBehaviour
 
     public void AddHandCard()
     {
-        int spacesCount = handManagerRef.handSpaces.Count;
-
-        for(int i=0;i<spacesCount&&i<shuffledList.Count;i++)
+        foreach (BaseSpace space in handManagerRef.handSpaces)
         {
-            var card = shuffledList[0];
-            handManagerRef.AddCardTo1Space(card, handManagerRef.handSpaces[i]);
-            shuffledList.RemoveAt(0);
-        }
-        /*
-        var shuffledListCount = shuffledList.Count;
-        for (int i = 0; i < shuffledListCount; i++)
-        {
+            if (shuffledList.Count <= 3)
+                break;
 
-            int handManagerSpaces = handManagerRef.handSpaces.Count;
-            for (int u = 0; u < handManagerSpaces; u++)
+            if (!space.HasCard())
             {
-
-
-                handManagerRef.AddCardTo1Hand(shuffledList[i], handManagerRef.handSpaces[u]);
-               //shuffledList.Remove(shuffledList[i]);
-
-
+                var card = shuffledList[0];
+                handManagerRef.AddCardTo1Space(card, space);
+                shuffledList.RemoveAt(0);
             }
+        }
 
-        }*/
-        
     }
 }
 

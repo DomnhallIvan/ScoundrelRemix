@@ -11,9 +11,6 @@ public class BaseCard : MonoBehaviour
     public List<Image> Icons = new List<Image>();
     public List<TextMeshProUGUI> CardName = new List<TextMeshProUGUI>();
 
-    [SerializeField] private GameManager gameManager;
-
-
     private IParentsCards cardParent;
 
     public virtual void Interact()
@@ -21,7 +18,7 @@ public class BaseCard : MonoBehaviour
         print("Falta una interacción");
 
         DiscardCard();
-        gameManager.cardsTakenCounter++;  
+
 
     }
 
@@ -78,9 +75,20 @@ public class BaseCard : MonoBehaviour
             cardParent.ClearCardObject();
            // GameManager.Instance.ShouldChangeRound();
         }
+      //  GameManager.Instance.cardsTakenCounter++;
         Destroy(gameObject);
+        //GameManager.Instance.cardsTakenCounter++;
+        GameManager.Instance.ShouldChangeRound();
         
     }
+
+    public void DiscardCard()
+    {
+        DiscardPileManager discardPManager = FindFirstObjectByType<DiscardPileManager>();
+        discardPManager.listofDCards.Add(CardType);
+        DestroySelf();
+    }
+
 
     /*
     public bool TryGetWeaponSpace(out PlayerWeaponsManager weaponSpace)
@@ -110,7 +118,7 @@ public class BaseCard : MonoBehaviour
         return cardObject;
     }
 
-    public void ReplaceWithIngredient(CardSO newCardSO)
+    public void ReplaceWithCard(CardSO newCardSO)
     {
         if (newCardSO == null)
         {
@@ -133,10 +141,4 @@ public class BaseCard : MonoBehaviour
 
     }
 
-    public void DiscardCard()
-    {
-        DiscardPileManager discardPManager = FindFirstObjectByType<DiscardPileManager>();
-        discardPManager.listofDCards.Add(CardType);
-        DestroySelf();
-    }
 }

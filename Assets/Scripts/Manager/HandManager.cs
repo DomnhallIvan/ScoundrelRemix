@@ -21,8 +21,11 @@ public class HandManager : MonoBehaviour
     public void AddCardTo1Space( CardSO cardSO, BaseSpace spaceHand)
     {
 
-        if(!spaceHand.HasCard())
+       
+        
             BaseCard.SpawnCardObject(cardSO, spaceHand);
+            print($"New Card here");
+
            
             
            // GameObject card = Instantiate(cardSO.prefab, handTransform[i].transform.position, Quaternion.identity, handTransform[i]);

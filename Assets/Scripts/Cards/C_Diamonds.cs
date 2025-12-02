@@ -22,13 +22,13 @@ public class C_Diamonds : BaseCard
         if(!hasAPlayer)
         {
             FindFirstObjectByType<PlayerWeaponsManager>().AddWeapon(GetCardSO());
-            if (this.GetCardParent() != null)
-            {
-                ClearCardParent();
-            }
-            GameManager.Instance.ShouldChangeRound();
+              
+            
             DiscardCard();
-                        
+            
+            //Podría hacer esto un delegate mejor y así evitar referencias
+           // GameManager.Instance.ShouldChangeRound();
+
         }
         else
         {

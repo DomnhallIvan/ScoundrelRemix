@@ -60,7 +60,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clubs-6
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7308574392260262201, guid: 043ea9837c42504498623d705f63fa26, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -68,6 +69,39 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: -1439546268832479183}
   m_SourcePrefab: {fileID: 100100000, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+--- !u!114 &3074416495869460167 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1962085752216164267, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+  m_PrefabInstance: {fileID: 3571423889707067756}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4903602357557801219 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8474973255958354031, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+  m_PrefabInstance: {fileID: 3571423889707067756}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5649819086441223983 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9221137405851500099, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+  m_PrefabInstance: {fileID: 3571423889707067756}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6839437849357703466 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8032925745271976006, guid: 043ea9837c42504498623d705f63fa26, type: 3}
@@ -85,8 +119,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c5e2d448aa93c9419af2f8e505eb5bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CardType: {fileID: 0}
-  Icons: []
-  CardName: []
+  CardType: {fileID: 11400000, guid: 5f8bf9e5d74f731459f470e409cfd3ee, type: 2}
+  Icons:
+  - {fileID: 5649819086441223983}
+  - {fileID: 4903602357557801219}
+  CardName:
+  - {fileID: 3074416495869460167}
+  - {fileID: 8882574941292654450}
   type: 0
   phealthManager: {fileID: 0}
+--- !u!114 &8882574941292654450 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5392218069682456094, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+  m_PrefabInstance: {fileID: 3571423889707067756}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
