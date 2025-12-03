@@ -48,6 +48,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5392218069682456094, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+      propertyPath: m_text
+      value: J
+      objectReference: {fileID: 0}
     - target: {fileID: 7308574392260262201, guid: 043ea9837c42504498623d705f63fa26, type: 3}
       propertyPath: CardType
       value: 
@@ -55,6 +59,38 @@ PrefabInstance:
     - target: {fileID: 8032925745271976006, guid: 043ea9837c42504498623d705f63fa26, type: 3}
       propertyPath: m_Name
       value: Diamonds-Jack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8474973255958354031, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 74708f4a1b48c094aaab56d2ac514346, type: 3}
+    - target: {fileID: 8474973255958354031, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+      propertyPath: m_Color.b
+      value: 0.0786757
+      objectReference: {fileID: 0}
+    - target: {fileID: 8474973255958354031, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+      propertyPath: m_Color.g
+      value: 0.0786757
+      objectReference: {fileID: 0}
+    - target: {fileID: 8474973255958354031, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9811321
+      objectReference: {fileID: 0}
+    - target: {fileID: 9221137405851500099, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 74708f4a1b48c094aaab56d2ac514346, type: 3}
+    - target: {fileID: 9221137405851500099, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+      propertyPath: m_Color.b
+      value: 0.0786757
+      objectReference: {fileID: 0}
+    - target: {fileID: 9221137405851500099, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+      propertyPath: m_Color.g
+      value: 0.0786757
+      objectReference: {fileID: 0}
+    - target: {fileID: 9221137405851500099, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9811321
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -84,3 +120,5 @@ MonoBehaviour:
   CardType: {fileID: 0}
   Icons: []
   CardName: []
+  hasAPlayer: 0
+  damageLimit: 0

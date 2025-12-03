@@ -8,6 +8,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1962085752216164267, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+      propertyPath: m_text
+      value: '4
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 2728041538454001693, guid: 043ea9837c42504498623d705f63fa26, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -60,6 +66,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5392218069682456094, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+      propertyPath: m_text
+      value: '4
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 7308574392260262201, guid: 043ea9837c42504498623d705f63fa26, type: 3}
       propertyPath: CardType
       value: 
@@ -67,6 +79,38 @@ PrefabInstance:
     - target: {fileID: 8032925745271976006, guid: 043ea9837c42504498623d705f63fa26, type: 3}
       propertyPath: m_Name
       value: Diamonds-4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8474973255958354031, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 74708f4a1b48c094aaab56d2ac514346, type: 3}
+    - target: {fileID: 8474973255958354031, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+      propertyPath: m_Color.b
+      value: 0.16509432
+      objectReference: {fileID: 0}
+    - target: {fileID: 8474973255958354031, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+      propertyPath: m_Color.g
+      value: 0.16509432
+      objectReference: {fileID: 0}
+    - target: {fileID: 8474973255958354031, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9221137405851500099, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 74708f4a1b48c094aaab56d2ac514346, type: 3}
+    - target: {fileID: 9221137405851500099, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+      propertyPath: m_Color.b
+      value: 0.16509432
+      objectReference: {fileID: 0}
+    - target: {fileID: 9221137405851500099, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+      propertyPath: m_Color.g
+      value: 0.16509432
+      objectReference: {fileID: 0}
+    - target: {fileID: 9221137405851500099, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7308574392260262201, guid: 043ea9837c42504498623d705f63fa26, type: 3}
@@ -134,6 +178,8 @@ MonoBehaviour:
   CardName:
   - {fileID: 3074416495869460167}
   - {fileID: 8882574941292654450}
+  hasAPlayer: 0
+  damageLimit: 0
 --- !u!114 &8882574941292654450 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5392218069682456094, guid: 043ea9837c42504498623d705f63fa26, type: 3}
