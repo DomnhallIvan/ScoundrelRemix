@@ -75,8 +75,9 @@ public class BaseCard : MonoBehaviour
             cardParent.ClearCardObject();
            // GameManager.Instance.ShouldChangeRound();
         }
+       
         Destroy(gameObject);
-        GameManager.Instance.ShouldChangeRound();
+
         
     }
 
@@ -86,6 +87,18 @@ public class BaseCard : MonoBehaviour
         handManager.cardsInHand.Remove(CardType);
         DiscardPileManager discardPManager = FindFirstObjectByType<DiscardPileManager>();
         discardPManager.listofDCards.Add(CardType);
+       
+        DestroySelf();
+        GameManager.Instance.ShouldChangeRound();
+
+    }
+
+    public void ReturnCardtoDeck()
+    {
+        HandManager handRef = FindFirstObjectByType<HandManager>();
+        handRef.cardsInHand.Remove(CardType);
+        DeckManager deckRef = FindFirstObjectByType<DeckManager>();
+        deckRef.shuffledList.Add(CardType);
         DestroySelf();
     }
 

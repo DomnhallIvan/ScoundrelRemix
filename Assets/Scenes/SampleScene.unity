@@ -1956,6 +1956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _deckMRef: {fileID: 616977995}
   _handMRef: {fileID: 1066726387}
+  canSkip: 1
 --- !u!1 &928699543
 GameObject:
   m_ObjectHideFlags: 0
@@ -3437,6 +3438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 903f81cdc0195e148ab2e8a598821c28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  runawayRef: {fileID: 871630376}
   cardsTakenCounter: 0
 --- !u!1001 &6387676452168254043
 PrefabInstance:

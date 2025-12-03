@@ -5,6 +5,7 @@ public class Runaway : MonoBehaviour
     [SerializeField] private DeckManager _deckMRef;
     [SerializeField] private HandManager _handMRef;
 
+    public bool canSkip=true;
     
     public void SkipHand()
     {
@@ -14,13 +15,16 @@ public class Runaway : MonoBehaviour
             _handMRef.cardsInHand[0]
         }*/
 
-        foreach (CardSO cardsinHand in _handMRef.cardsInHand)
+        if(canSkip)
         {
-            _deckMRef.shuffledList.Add(cardsinHand);
-            
-           // _handMRef.cardsInHand.Remove(cardsinHand);
-            //_handMRef.cardsInHand.RemoveAt(0);
+            canSkip = false;
+            foreach (BaseSpace cardinSpace in _handMRef.handSpaces)
+            {
+                cardinSpace.GetCard().ReturnCardtoDeck();
+            }
+
+            RoundManager.Instance.NextRound();
         }
-        _handMRef.cardsInHand.Clear();
+
     }
 }

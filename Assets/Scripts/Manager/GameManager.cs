@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    
     public static GameManager Instance { get; private set; }
 
     //Cada vez que se colecte una carta se llama este evento, cuando hayan suficientes entonces 
     //en RoundManager podremos pasar a la siguiente ronda de ser posible.
+    [SerializeField] private Runaway runawayRef;
     public event EventHandler CardsCollected;
     public float cardsTakenCounter;
 
@@ -42,6 +44,7 @@ public class GameManager : MonoBehaviour
         cardsTakenCounter++;
         if (cardsTakenCounter >= 3)
         {
+            runawayRef.canSkip = true;
             CardsCollected?.Invoke(this, EventArgs.Empty);
             cardsTakenCounter = 0;
             // RoundManager.Instance.OnRoundEnd+=
