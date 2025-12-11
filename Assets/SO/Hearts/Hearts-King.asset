@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 826d728869c9f054dadba0bc54c87f82, type: 3}
   m_Name: Hearts-King
   m_EditorClassIdentifier: 
-  prefab: {fileID: 8640189368264541578, guid: 61d8e3ce7ccae15499b29f2fa49c055a, type: 3}
+  prefab: {fileID: 960037694530028469, guid: 4706d108a8b20d84684110c40a1d68f5, type: 3}
   cardType: 020000000500000007000000
   cardName: King-Hearts
   ingredientSprite: {fileID: 0}

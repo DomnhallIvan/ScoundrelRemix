@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 826d728869c9f054dadba0bc54c87f82, type: 3}
   m_Name: Spade-5
   m_EditorClassIdentifier: 
-  prefab: {fileID: 9010863746428157350, guid: 22d7cfdd42a31f148889440689020d91, type: 3}
+  prefab: {fileID: 2703680602113785009, guid: 15da710642f095640b590a92f9196736, type: 3}
   cardType: 010000000600000008000000
   cardName: 5-Spade
   ingredientSprite: {fileID: 0}

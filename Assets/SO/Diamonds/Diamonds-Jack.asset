@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 826d728869c9f054dadba0bc54c87f82, type: 3}
   m_Name: Diamonds-Jack
   m_EditorClassIdentifier: 
-  prefab: {fileID: 8640189368264541578, guid: 03620324f3250454b84fd60d56dc9ea8, type: 3}
+  prefab: {fileID: 6131272598165896435, guid: c1785c3e76d27084db28296898ffaf72, type: 3}
   cardType: 030000000500000007000000
   cardName: Jack-Diamonds
   ingredientSprite: {fileID: 0}
