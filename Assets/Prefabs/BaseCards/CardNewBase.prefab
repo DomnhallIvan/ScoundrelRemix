@@ -45,6 +45,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -8186001269883987172}
     - target: {fileID: 2735492883694931023, guid: 043ea9837c42504498623d705f63fa26, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1a1c27d7300f3cd48942d4bae5c28242, type: 3}
+    - target: {fileID: 2735492883694931023, guid: 043ea9837c42504498623d705f63fa26, type: 3}
       propertyPath: m_Color.b
       value: 0.3584906
       objectReference: {fileID: 0}
@@ -103,7 +107,7 @@ PrefabInstance:
     - target: {fileID: 5096311604445898038, guid: 043ea9837c42504498623d705f63fa26, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: f58c95ba8a3773a43be53b0e26c11450, type: 3}
+      objectReference: {fileID: 21300000, guid: d0679679383f9574f8a3730a1d6790ff, type: 3}
     - target: {fileID: 5096311604445898038, guid: 043ea9837c42504498623d705f63fa26, type: 3}
       propertyPath: m_Color.b
       value: 0.3207547
@@ -142,7 +146,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: aba95aae2088c1d45aa4958e6d7e9e57, type: 2}
     - target: {fileID: 8032925745271976006, guid: 043ea9837c42504498623d705f63fa26, type: 3}
       propertyPath: m_Name
-      value: Spades-Ace
+      value: CardNewBase
       objectReference: {fileID: 0}
     - target: {fileID: 8474973255958354031, guid: 043ea9837c42504498623d705f63fa26, type: 3}
       propertyPath: m_Sprite
