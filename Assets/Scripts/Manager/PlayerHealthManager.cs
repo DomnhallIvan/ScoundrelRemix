@@ -5,6 +5,7 @@ public class PlayerHealthManager : MonoBehaviour
     [SerializeField] private float _health = 20f;
     [SerializeField] private float _maxHealth = 20f;
     [SerializeField] private PlayerWeaponsManager _weaponsManagerRef;
+    [SerializeField] private HPVisuals _HPVisual;
 
     private void Start()
     {
@@ -23,7 +24,7 @@ public class PlayerHealthManager : MonoBehaviour
         }
         else
         {
-            if (GetEnoughDamage(attack.amount))
+            if (CanDefendDamage(attack.amount))
             {
                 _weaponsManagerRef.activateWeapon = false;
                 var DiamondCard = _weaponsManagerRef.GetCard().GetComponent<C_Diamonds>();
@@ -48,6 +49,7 @@ public class PlayerHealthManager : MonoBehaviour
     public void TakeDamage(AttackInfo attack)
     {
         _health -= attack.amount;
+        _HPVisual.UpdateHealth(_health);
         if (_health <= 0)
         {
             YouAreDead();
@@ -63,10 +65,12 @@ public class PlayerHealthManager : MonoBehaviour
         if(!(newHealth >= _maxHealth)) 
         {
             _health += attack.amount;
+            _HPVisual.UpdateHealth(_health);
         }
         else
         {
             _health = _maxHealth;
+            _HPVisual.UpdateHealth(_health);
         }
     }
 
@@ -79,7 +83,7 @@ public class PlayerHealthManager : MonoBehaviour
         }
     }
 
-    public bool GetEnoughDamage(float attackAmount)
+    public bool CanDefendDamage(float attackAmount)
     {
         float currentweaponLimit = _weaponsManagerRef.GetDiamondCard().GetDamageLimit();
         if (currentweaponLimit >= attackAmount)

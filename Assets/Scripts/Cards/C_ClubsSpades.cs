@@ -38,7 +38,7 @@ public class C_ClubsSpades : BaseCard
         }
         else
         {
-            if (phealthManager.GetEnoughDamage(CardType.damage))
+            if (phealthManager.CanDefendDamage(CardType.damage))
             {
 
               //  transform.SetParent(null);
