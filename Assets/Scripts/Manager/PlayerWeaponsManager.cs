@@ -8,6 +8,7 @@ public class PlayerWeaponsManager : BaseSpace
     [SerializeField] private BaseCard currentWeaponCard;
 
     [SerializeField] private PlayerHealthManager playerHealthRef;
+    [SerializeField] private VisualWeapon _visualWRef;
     public bool activateWeapon;
 
     public void UseWeapon()
@@ -17,14 +18,24 @@ public class PlayerWeaponsManager : BaseSpace
         //El siguiente daño que tome el jugador tendrá que restarle primero el daño de esta arma al daño que debería de recibir.
 
         //Falta implementar checar que en caso de que ya haya sido utilizada un arma, entonces  que tenga un valor igual o meno
-        print("Use esta arma");
-        if (!activateWeapon) 
+       // print("Use esta arma");
+        if (!activateWeapon)
+        {
             activateWeapon = true;
+           ActivateWeaponVisual();
+        }
+      
         else
+        {
             activateWeapon = false;
+            ActivateWeaponVisual();
+            _visualWRef.ActiveWeapon(activateWeapon);
+        }
+          
+
     } 
 
-
+    //Se añade una nueva arma
     public void AddWeapon(CardSO newWeapon)
     {
         if(currentweaponCardSO != null)
@@ -48,14 +59,16 @@ public class PlayerWeaponsManager : BaseSpace
     {
         return GetCard().GetComponent<C_Diamonds>();
     }
-
+    //Maneja la lógica de añadir una nueva arma
     private void SpawnCard(CardSO newCard)
     {
         BaseCard.SpawnCardObject(newCard, this);
         currentWeaponCard=GetCard();
         C_Diamonds current_Diamond = currentWeaponCard.GetComponent<C_Diamonds>();
         current_Diamond.hasAPlayer = true;
-        currentweaponCardSO = newCard;             
+        currentweaponCardSO = newCard;
+       // Material NewDiamondMaterial=current_Diamond.GetComponent<Material>();
+
     }
 
     private void DiscardCurrentWeapon()
@@ -65,5 +78,11 @@ public class PlayerWeaponsManager : BaseSpace
         Destroy(currentWeaponCard);
     }
 
+
+    public void ActivateWeaponVisual()
+    {
+        C_Diamonds current_Diamond = currentWeaponCard.GetComponent<C_Diamonds>();
+        current_Diamond.ChangeMaterial(activateWeapon);
+    }
     
 }

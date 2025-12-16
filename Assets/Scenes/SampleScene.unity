@@ -1912,6 +1912,7 @@ GameObject:
   - component: {fileID: 871630374}
   - component: {fileID: 871630375}
   - component: {fileID: 871630376}
+  - component: {fileID: 871630377}
   m_Layer: 0
   m_Name: PlayerInventoryManager
   m_TagString: Untagged
@@ -1951,6 +1952,7 @@ MonoBehaviour:
   currentweaponCardSO: {fileID: 0}
   currentWeaponCard: {fileID: 0}
   playerHealthRef: {fileID: 0}
+  _visualWRef: {fileID: 871630377}
   activateWeapon: 0
 --- !u!114 &871630376
 MonoBehaviour:
@@ -1967,6 +1969,19 @@ MonoBehaviour:
   _deckMRef: {fileID: 616977995}
   _handMRef: {fileID: 1066726387}
   canSkip: 1
+--- !u!114 &871630377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871630373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d51262452763044b86e3640fe63606b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _textRef: {fileID: 0}
 --- !u!1 &928699543
 GameObject:
   m_ObjectHideFlags: 0
@@ -2148,8 +2163,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0

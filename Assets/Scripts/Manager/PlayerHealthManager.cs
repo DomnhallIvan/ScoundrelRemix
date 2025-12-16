@@ -29,6 +29,7 @@ public class PlayerHealthManager : MonoBehaviour
                 _weaponsManagerRef.activateWeapon = false;
                 var DiamondCard = _weaponsManagerRef.GetCard().GetComponent<C_Diamonds>();
                 DiamondCard.SetDamageLimit(attack.amount);
+                DiamondCard.ChangeMaterial(false);
                 //Hace el calculo total del daño 
                 float weaponDamage = _weaponsManagerRef.GetCardDamage();
                 float totaldamage = attack.amount - weaponDamage;
