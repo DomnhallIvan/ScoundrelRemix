@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    
+    //GameManager se encarga de detectar cuando hay suficientes cartas para pasar a la siguiente ronda.
+    //También se encarga de que al pasar a la siguiente ronda reseteé la opción de huir a la siguiente ronda
     public static GameManager Instance { get; private set; }
 
-    //Cada vez que se colecte una carta se llama este evento, cuando hayan suficientes entonces 
-    //en RoundManager podremos pasar a la siguiente ronda de ser posible.
     [SerializeField] private Runaway runawayRef;
     public event EventHandler CardsCollected;
     public float cardsTakenCounter;

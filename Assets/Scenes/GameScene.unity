@@ -1951,7 +1951,7 @@ MonoBehaviour:
   currentCard: {fileID: 0}
   currentweaponCardSO: {fileID: 0}
   currentWeaponCard: {fileID: 0}
-  playerHealthRef: {fileID: 0}
+  playerHealthRef: {fileID: 95267463}
   _visualWRef: {fileID: 871630377}
   activateWeapon: 0
 --- !u!114 &871630376

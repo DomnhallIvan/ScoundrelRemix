@@ -3,12 +3,12 @@ using UnityEngine.SceneManagement;
 
 public class PlayerDeath : MonoBehaviour
 {
-
+    [SerializeField] LoseWinManager _LWManagerRef;
 
 
     public void YouAreDead()
     {
-        print("YouAreDead");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        _LWManagerRef.ShowEnding(false);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

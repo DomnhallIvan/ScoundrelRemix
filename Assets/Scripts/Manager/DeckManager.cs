@@ -11,6 +11,7 @@ public class DeckManager : MonoBehaviour
     public List<CardSO> shuffledList = new List<CardSO>();
 
     [SerializeField] private HandManager handManagerRef;
+    [SerializeField] LoseWinManager _LWManagerRef;
 
     private void Awake()
     {
@@ -38,7 +39,7 @@ public class DeckManager : MonoBehaviour
 
     public void ShuffleDeck()
     {
-        print("Shuffling Decks");
+
         shuffledList = cards.OrderBy(x => UnityEngine.Random.value).ToList();
 
         AddHandCard();
@@ -49,10 +50,14 @@ public class DeckManager : MonoBehaviour
         foreach (BaseSpace space in handManagerRef.handSpaces)
         {
             if (shuffledList.Count <= 3)
-                //YOU WIN FUNCTION
-                break;
+            {
 
-            if (!space.HasCard())
+                _LWManagerRef.ShowEnding(true);
+                //YOU WIN FUNCTION Podría llamar un delegado para así saber que ya se acabó.
+                break;
+            }
+
+            else if (!space.HasCard())
             {
                 var card = shuffledList[0];
                 handManagerRef.AddCardTo1Space(card, space);

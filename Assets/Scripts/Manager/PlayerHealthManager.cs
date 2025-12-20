@@ -20,7 +20,7 @@ public class PlayerHealthManager : MonoBehaviour
 
         if (!HasAnActiveWeapon())
         {
-            TakeDamage(attack);
+            TakeDamage(attack.amount);
         }
         else
         {
@@ -34,9 +34,9 @@ public class PlayerHealthManager : MonoBehaviour
                 float weaponDamage = _weaponsManagerRef.GetCardDamage();
                 float totaldamage = attack.amount - weaponDamage;
 
-                if (totaldamage >= 0) //Si el daño es mayor o igual a 0 entonces procede con el cálculo del daño.
+                if (totaldamage >= 0) //Si el daño es mayor o igual a 0 entonces procede con el cálculo del daño Para evitar que daño negativo cure al jugador.
                 {
-                    TakeDamage(attack);
+                    TakeDamage(totaldamage);
                 }
             }
             else
@@ -47,9 +47,9 @@ public class PlayerHealthManager : MonoBehaviour
         }
     }
 
-    public void TakeDamage(AttackInfo attack)
+    public void TakeDamage(float attack)
     {
-        _health -= attack.amount;
+        _health -= attack;
         _HPVisual.UpdateHealth(_health);
         if (_health <= 0)
         {
