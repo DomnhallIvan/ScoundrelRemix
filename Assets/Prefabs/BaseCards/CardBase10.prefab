@@ -59,7 +59,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.32895884, g: 0.30713776, b: 0.5471698, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.32895884, g: 0.30713776, b: 0.5471698, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.32895884, g: 0.30713776, b: 0.5471698, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -284,7 +284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.32895884, g: 0.30713776, b: 0.5471698, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -359,7 +359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.32895884, g: 0.30713776, b: 0.5471698, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -434,7 +434,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.32895884, g: 0.30713776, b: 0.5471698, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -509,7 +509,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.32895884, g: 0.30713776, b: 0.5471698, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -584,7 +584,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.32895884, g: 0.30713776, b: 0.5471698, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -678,7 +678,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1458995233786116755, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.913
+      value: -0.939
       objectReference: {fileID: 0}
     - target: {fileID: 1458995233786116755, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -686,7 +686,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1784198422060863429, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.963
+      value: 1.005
       objectReference: {fileID: 0}
     - target: {fileID: 1784198422060863429, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -701,11 +701,31 @@ PrefabInstance:
       value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3074416495869460167, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
+      propertyPath: m_margin.z
+      value: 0.014114381
+      objectReference: {fileID: 0}
+    - target: {fileID: 3074416495869460167, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
       propertyPath: m_fontSizeBase
       value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3074416495869460167, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
+      propertyPath: m_overflowMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3074416495869460167, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
       propertyPath: m_TextWrappingMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3074416495869460167, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
+      propertyPath: m_characterSpacing
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3074416495869460167, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
+      propertyPath: m_IsTextObjectScaleStatic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387348188678890034, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
+      propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4739555539179881472, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
@@ -738,7 +758,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4739555539179881472, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.292
+      value: 0.307
       objectReference: {fileID: 0}
     - target: {fileID: 4739555539179881472, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -751,6 +771,14 @@ PrefabInstance:
     - target: {fileID: 4739555539179881472, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4903602357557801219, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5649819086441223983, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5969162526887847704, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
       propertyPath: m_LocalScale.x
@@ -766,7 +794,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5969162526887847704, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 2.281
+      value: 2.247
       objectReference: {fileID: 0}
     - target: {fileID: 5969162526887847704, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -778,7 +806,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6839437849357703466, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
       propertyPath: m_Name
-      value: NewSpades-10
+      value: CardBase10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6958853353489840264, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8640189368264541578, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
       propertyPath: m_LocalPosition.x
@@ -831,6 +863,10 @@ PrefabInstance:
     - target: {fileID: 8882574941292654450, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
       propertyPath: m_fontSizeBase
       value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8882574941292654450, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
+      propertyPath: m_characterSpacing
+      value: -15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -3,6 +3,7 @@ using Unity.VisualScripting;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
+using System;
 
 public class BaseCard : MonoBehaviour
 {
@@ -10,11 +11,21 @@ public class BaseCard : MonoBehaviour
 
     public List<Image> Icons = new List<Image>();
     public List<TextMeshProUGUI> CardName = new List<TextMeshProUGUI>();
+    public Runaway runRef;
 
     private IParentsCards cardParent;
 
+    public event EventHandler OnCardPicked;
+
+    private void Start()
+    {
+        runRef = FindFirstObjectByType<Runaway>();
+    }
+
     public virtual void Interact()
     {
+        //Aquí se debería de llamar el evento de OnCardPicked
+        OnCardPicked?.Invoke(this, EventArgs.Empty);
         print("Falta una interacción");
 
         DiscardCard();

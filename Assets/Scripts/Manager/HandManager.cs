@@ -22,7 +22,7 @@ public class HandManager : MonoBehaviour
         
         BaseCard.SpawnCardObject(cardSO, spaceHand);
         cardsInHand.Add(spaceHand.GetCard().GetCardSO());   
-        print($"New Card here");
+
 
            
             

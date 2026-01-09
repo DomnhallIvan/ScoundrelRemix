@@ -11,6 +11,22 @@ public class PlayerWeaponsManager : BaseSpace
     [SerializeField] private VisualWeapon _visualWRef;
     public bool activateWeapon;
 
+    private Vector3 mousePosition;
+    [SerializeField] private float moveSpeed = 0.1f;
+
+    private void Update()
+    {
+        //mousePosition=Input.mousePosition;
+        //mousePosition=Camera.main.transform.position;
+        //En vez de transform.position se pondría el transform de la carta
+        //transform.position=Vector2.Lerp(transform.position, mousePosition, moveSpeed);
+    }
+
+    private void MakeWeaponFollowPlayer()
+    {
+
+    }
+
     public void UseWeapon()
     {
 
@@ -23,6 +39,7 @@ public class PlayerWeaponsManager : BaseSpace
         {
             activateWeapon = true;
            ActivateWeaponVisual();
+            MakeWeaponFollowPlayer();
         }
       
         else

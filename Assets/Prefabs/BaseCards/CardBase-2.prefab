@@ -59,7 +59,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.32895884, g: 0.30713776, b: 0.5471698, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -153,6 +153,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4903602357557801219, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5649819086441223983, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6839437849357703466, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
       propertyPath: m_Name
       value: CardBase-2
@@ -160,6 +168,10 @@ PrefabInstance:
     - target: {fileID: 6958853353489840264, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6958853353489840264, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8586538733693013082, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
       propertyPath: m_Enabled

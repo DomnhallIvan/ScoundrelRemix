@@ -6,9 +6,8 @@ public class C_Hearts : BaseCard
 
     private void Start()
     {
-        CardType = this.GetComponent<BaseCard>().CardType;
-        Icons = this.GetComponent<BaseCard>().Icons;
-        CardName = this.GetComponent<BaseCard>().CardName;
+
+        runRef = FindFirstObjectByType<Runaway>();
 
         phealthManager = FindFirstObjectByType<PlayerHealthManager>();
 
@@ -16,6 +15,7 @@ public class C_Hearts : BaseCard
 
     public override void Interact()
     {
+        runRef.canSkip = false;
         phealthManager.HealDamage(new AttackInfo { attackType = AttackType.Healing, amount = CardType.damage });
         // this.GetCardParent().ClearCardObject();
 

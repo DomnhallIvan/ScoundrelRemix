@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class C_ClubsSpades : BaseCard
@@ -7,12 +8,13 @@ public class C_ClubsSpades : BaseCard
 
     [SerializeField] private PlayerHealthManager phealthManager;
 
+
     private void Start()
     {
 
-
+        runRef = FindFirstObjectByType<Runaway>();
         phealthManager = FindFirstObjectByType<PlayerHealthManager>();
-
+        //
     }
 
     public void MakeAttack(AttackInfo attackInfo)
@@ -24,6 +26,9 @@ public class C_ClubsSpades : BaseCard
 
     public override void Interact()
     {
+        //OnCardPicked?.Invoke(this, EventArgs.Empty);
+        runRef.canSkip = false;
+
         MakeAttack(new AttackInfo { attackType = AttackType.Common, amount = CardType.damage });
         phealthManager.CalculateDamage(new AttackInfo { attackType = AttackType.Common, amount = CardType.damage });
 

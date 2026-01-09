@@ -30,7 +30,7 @@ public class RoundManager : MonoBehaviour
     private void StartNextRound(object sender,EventArgs e)
     {
         NextRound();
-        print("NextRound");
+
     }
 
     public void NextRound()

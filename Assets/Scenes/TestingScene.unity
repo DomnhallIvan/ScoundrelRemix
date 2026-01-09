@@ -867,9 +867,9 @@ RectTransform:
   - {fileID: 800235434}
   m_Father: {fileID: 1662354966}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1168.2443, y: -227.90614}
   m_SizeDelta: {x: 295.6755, y: 455.8123}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &537890387
@@ -1550,9 +1550,9 @@ RectTransform:
   - {fileID: 1099958444}
   m_Father: {fileID: 1662354966}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 828.10876, y: -227.90614}
   m_SizeDelta: {x: 295.6755, y: 455.8123}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &758277882
@@ -2135,6 +2135,7 @@ MonoBehaviour:
   playerHealthRef: {fileID: 95267463}
   _visualWRef: {fileID: 871630377}
   activateWeapon: 0
+  moveSpeed: 0.1
 --- !u!114 &871630376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3108,9 +3109,9 @@ RectTransform:
   - {fileID: 382135073}
   m_Father: {fileID: 1662354966}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 487.97327, y: -227.90614}
   m_SizeDelta: {x: 295.6755, y: 455.8123}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1248301745
@@ -3869,9 +3870,9 @@ RectTransform:
   - {fileID: 1588868168}
   m_Father: {fileID: 1662354966}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 147.83775, y: -227.90614}
   m_SizeDelta: {x: 295.6755, y: 455.8123}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1632257549

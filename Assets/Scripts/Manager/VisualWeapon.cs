@@ -10,11 +10,11 @@ public class VisualWeapon : MonoBehaviour
         if (isActive)
         {
             //Se activa el efecto chido
-            print("Esta Activo");
+
         }
         else
         {
-            print("Esta Desactivado el arma");
+
         }
     }
 }

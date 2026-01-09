@@ -330,7 +330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6839437849357703466, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
       propertyPath: m_Name
-      value: NewSpades-Queen
+      value: CardbaseQueen
       objectReference: {fileID: 0}
     - target: {fileID: 8640189368264541578, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
       propertyPath: m_LocalPosition.x

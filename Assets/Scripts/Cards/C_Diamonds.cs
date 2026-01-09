@@ -14,6 +14,8 @@ public class C_Diamonds : BaseCard
 
     private void Start()
     {
+        runRef = FindFirstObjectByType<Runaway>();
+
         damageLimit = float.MaxValue;
         ChangeMaterial(false);
 
@@ -21,14 +23,14 @@ public class C_Diamonds : BaseCard
 
     public override void  Interact()
     {
-
-       // bool HasCardPlayerParent= GetCardParent().GetPlayerWeaponsManager();
+       
+        // bool HasCardPlayerParent= GetCardParent().GetPlayerWeaponsManager();
         //A como esta solo genera un bug ya que jamás se pone el booleano al momento de spawnearlo lo que por default destruye el arma y evita que otra se vuelva a crear. Probablemente cambiar cómo detectar si el jugador ya tiene esa arma.
-        if(!hasAPlayer)
+        if (!hasAPlayer)
         {
             FindFirstObjectByType<PlayerWeaponsManager>().AddWeapon(GetCardSO());
-              
-            
+            runRef.canSkip = false;
+
             DiscardCard();
             
             //Podría hacer esto un delegate mejor y así evitar referencias

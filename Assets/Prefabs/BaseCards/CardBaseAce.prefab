@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6839437849357703466, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
       propertyPath: m_Name
-      value: NewSpades-Ace
+      value: CardBaseAce
       objectReference: {fileID: 0}
     - target: {fileID: 6958853353489840264, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
       propertyPath: m_Enabled
