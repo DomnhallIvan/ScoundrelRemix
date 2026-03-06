@@ -31,7 +31,7 @@ PrefabInstance:
     - target: {fileID: 996824145540309608, guid: cc834207a2949554f86af0deff4d1ff4, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: a167dd250a043684cb6f830de35d74ab, type: 3}
+      objectReference: {fileID: 21300000, guid: bf4d830dd1d57da4d8d6249d884376ac, type: 3}
     - target: {fileID: 996824145540309608, guid: cc834207a2949554f86af0deff4d1ff4, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -72,6 +72,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2731254628418902558, guid: cc834207a2949554f86af0deff4d1ff4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bf4d830dd1d57da4d8d6249d884376ac, type: 3}
     - target: {fileID: 4939650685341101827, guid: cc834207a2949554f86af0deff4d1ff4, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -100,6 +104,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: C_ClubsSpades, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 5298505114660475690, guid: cc834207a2949554f86af0deff4d1ff4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5685797807433730351, guid: cc834207a2949554f86af0deff4d1ff4, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -115,6 +123,10 @@ PrefabInstance:
     - target: {fileID: 5685797807433730351, guid: cc834207a2949554f86af0deff4d1ff4, type: 3}
       propertyPath: m_Color.r
       value: 0.56116855
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754472514275399856, guid: cc834207a2949554f86af0deff4d1ff4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6057212695438663942, guid: cc834207a2949554f86af0deff4d1ff4, type: 3}
       propertyPath: m_Name

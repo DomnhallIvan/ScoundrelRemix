@@ -80,6 +80,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: C_Hearts, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 2731254628418902558, guid: ad879be1a334c3b4e9e499407e5f862f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6560a2b9f24040343808bf3fde1746f1, type: 3}
     - target: {fileID: 4466030666455671553, guid: ad879be1a334c3b4e9e499407e5f862f, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -295,6 +299,7 @@ MonoBehaviour:
   CardName:
   - {fileID: 7410097814642890019}
   - {fileID: 3979581082040173718}
+  runRef: {fileID: 0}
   phealthManager: {fileID: 0}
 --- !u!114 &3979581082040173718 stripped
 MonoBehaviour:

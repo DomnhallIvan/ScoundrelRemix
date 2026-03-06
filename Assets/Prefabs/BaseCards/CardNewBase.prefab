@@ -318,6 +318,7 @@ MonoBehaviour:
   CardName:
   - {fileID: 3074416495869460167}
   - {fileID: 8882574941292654450}
+  runRef: {fileID: 0}
   type: 0
   phealthManager: {fileID: 0}
 --- !u!114 &8882574941292654450 stripped

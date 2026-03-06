@@ -489,6 +489,7 @@ MonoBehaviour:
   CardName:
   - {fileID: 9043262265039173436}
   - {fileID: 3201958483108046473}
+  runRef: {fileID: 0}
   hasAPlayer: 0
   materialList:
   - {fileID: 2100000, guid: bdd422104b7edb84eab0ed3abf8b97dd, type: 2}

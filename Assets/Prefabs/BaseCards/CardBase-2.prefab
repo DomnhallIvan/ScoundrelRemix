@@ -149,6 +149,10 @@ PrefabInstance:
 
 '
       objectReference: {fileID: 0}
+    - target: {fileID: 3387348188678890034, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b855421243c99cb48997033e3d90804c, type: 3}
     - target: {fileID: 4250590781318636360, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -156,6 +160,10 @@ PrefabInstance:
     - target: {fileID: 4903602357557801219, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4989677111282901148, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5649819086441223983, guid: 0103ad3989b8ff8499610ff7b8453720, type: 3}
       propertyPath: m_RaycastTarget
